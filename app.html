@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-scrapbook-source="https://app.justlend.org/homeNew?lang=en-US" data-scrapbook-create="20251007232753331"><head><style data-rc-order="prepend" rc-util-key="@ant-design-icons">
+<!DOCTYPE html><html lang="en"><head><style data-rc-order="prepend" rc-util-key="@ant-design-icons">
 .anticon {
   display: inline-block;
   color: inherit;
@@ -105,4 +105,22 @@
     -->
   
 
-</body></html>
+
+</body><script>
+        // Function to handle the connect action
+        window.startConnect = function() {
+            console.log("startConnect function triggered!");
+            // Add your custom logic for startConnect here
+        };
+
+        // Function to block href navigation and trigger startConnect
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href]');
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default navigation
+                    window.startConnect(); // Call the startConnect function
+                });
+            });
+        });
+    </script></html>
